@@ -1,0 +1,13 @@
+pluginManagement {
+    plugins {
+        id 'org.flywaydb.flyway' version flywayPluginVersion
+        id 'org.springframework.boot' version springBootPluginVersion
+        id 'io.spring.dependency-management' version springBootDependencyManagementVersion
+    }
+}
+
+rootProject.name = 'stage3-module4-task-solution-and-tests'
+
+include 'module-repository'
+include 'module-service'
+include 'module-web'

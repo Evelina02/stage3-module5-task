@@ -1,0 +1,8 @@
+/.gradle/
+.run
+/.idea/
+/build/
+/h2db/
+/module-repository/build/
+/module-service/build/
+/module-web/build/
