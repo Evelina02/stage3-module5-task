@@ -1,15 +1,5 @@
 package com.mjc.school.service.mapper;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import org.mapstruct.AfterMapping;
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.MappingTarget;
-import org.mapstruct.NullValueCheckStrategy;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.mjc.school.repository.BaseRepository;
 import com.mjc.school.repository.impl.AuthorRepository;
 import com.mjc.school.repository.impl.TagRepository;
@@ -20,7 +10,14 @@ import com.mjc.school.service.dto.CommentsDtoForNewsResponse;
 import com.mjc.school.service.dto.CreateNewsDtoRequest;
 import com.mjc.school.service.dto.NewsDtoResponse;
 import com.mjc.school.service.dto.UpdateNewsDtoRequest;
+import org.mapstruct.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
+@Primary
 @Mapper(componentModel = "spring", uses = {AuthorMapper.class, TagMapper.class, CommentMapper.class},
     nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
 public abstract class NewsMapper {
@@ -56,8 +53,7 @@ public abstract class NewsMapper {
     @Mapping(target = "createdDate", ignore = true)
     @Mapping(target = "lastUpdatedDate", ignore = true)
     @Mapping(target = "author", ignore = true)
-    @Mapping(target = "tags", expression =
-        "java(dto.tags().stream().map(name -> tagRepository.readByName(name).get()).toList())")
+    @Mapping(target = "tags", ignore=true)
     @Mapping(target = "comments", expression =
         "java(dto.commentsIds().stream().map(commentId -> commentsRepository.getReference(commentId)).toList())")
     public abstract News dtoToModel(UpdateNewsDtoRequest dto);

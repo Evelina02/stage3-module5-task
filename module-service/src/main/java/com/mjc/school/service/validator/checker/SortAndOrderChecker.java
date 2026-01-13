@@ -1,13 +1,12 @@
 package com.mjc.school.service.validator.checker;
 
-import static com.mjc.school.service.filter.mapper.BaseSearchFilterMapper.SORT_AND_FILTER_DELIMITER;
+import com.mjc.school.repository.filter.sorting.SortOrder;
+import com.mjc.school.service.validator.constraint.SortAndOrder;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-import org.springframework.stereotype.Component;
-
-import com.mjc.school.repository.filter.sorting.SortOrder;
-import com.mjc.school.service.validator.constraint.SortAndOrder;
+import static com.mjc.school.service.filter.mapper.BaseSearchFilterMapper.SORT_AND_FILTER_DELIMITER;
 
 @Component
 public class SortAndOrderChecker implements ConstraintChecker<SortAndOrder> {

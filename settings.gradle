@@ -5,9 +5,6 @@ pluginManagement {
         id 'io.spring.dependency-management' version springBootDependencyManagementVersion
     }
 }
+rootProject.name = 'stage3-module5-task'
 
-rootProject.name = 'stage3-module4-task-solution-and-tests'
-
-include 'module-repository'
-include 'module-service'
-include 'module-web'
+include 'module-repository', 'module-service', 'module-web'

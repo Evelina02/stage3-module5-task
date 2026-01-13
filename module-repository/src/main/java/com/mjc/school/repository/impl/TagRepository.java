@@ -1,14 +1,12 @@
 package com.mjc.school.repository.impl;
 
-import java.util.List;
-import java.util.Optional;
-
-import javax.persistence.NoResultException;
-import javax.persistence.TypedQuery;
-
+import com.mjc.school.repository.model.Tag;
+import jakarta.persistence.NoResultException;
+import jakarta.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 
-import com.mjc.school.repository.model.Tag;
+import java.util.List;
+import java.util.Optional;
 
 @Repository
 public class TagRepository extends AbstractDBRepository<Tag, Long> {

@@ -1,13 +1,11 @@
 package com.mjc.school.repository.impl;
 
-import java.util.Optional;
-
-import javax.persistence.NoResultException;
-import javax.persistence.TypedQuery;
-
+import com.mjc.school.repository.model.Author;
+import jakarta.persistence.NoResultException;
+import jakarta.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 
-import com.mjc.school.repository.model.Author;
+import java.util.Optional;
 
 @Repository
 public class AuthorRepository extends AbstractDBRepository<Author, Long> {

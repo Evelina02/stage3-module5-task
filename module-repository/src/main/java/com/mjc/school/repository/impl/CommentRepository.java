@@ -1,12 +1,10 @@
 package com.mjc.school.repository.impl;
 
-import java.util.List;
-
-import javax.persistence.TypedQuery;
-
+import com.mjc.school.repository.model.Comment;
+import jakarta.persistence.TypedQuery;
 import org.springframework.stereotype.Repository;
 
-import com.mjc.school.repository.model.Comment;
+import java.util.List;
 
 @Repository
 public class CommentRepository extends AbstractDBRepository<Comment, Long> {

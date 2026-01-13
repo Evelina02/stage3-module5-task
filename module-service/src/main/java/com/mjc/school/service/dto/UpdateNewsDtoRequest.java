@@ -1,11 +1,10 @@
 package com.mjc.school.service.dto;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.mjc.school.service.validator.constraint.Size;
 import org.springframework.lang.Nullable;
 
-import com.mjc.school.service.validator.constraint.Size;
+import java.util.ArrayList;
+import java.util.List;
 
 public record UpdateNewsDtoRequest(
     @Nullable

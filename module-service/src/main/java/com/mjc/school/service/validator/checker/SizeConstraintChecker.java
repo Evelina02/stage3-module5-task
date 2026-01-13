@@ -1,8 +1,7 @@
 package com.mjc.school.service.validator.checker;
 
-import org.springframework.stereotype.Component;
-
 import com.mjc.school.service.validator.constraint.Size;
+import org.springframework.stereotype.Component;
 
 @Component
 public class SizeConstraintChecker implements ConstraintChecker<Size> {

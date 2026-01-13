@@ -1,18 +1,19 @@
 package com.mjc.school.service.mapper;
 
-import java.util.List;
-
-import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
-import org.mapstruct.NullValueCheckStrategy;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.mjc.school.repository.impl.NewsRepository;
 import com.mjc.school.repository.model.Comment;
 import com.mjc.school.service.dto.CommentsDtoForNewsResponse;
 import com.mjc.school.service.dto.CommentsDtoRequest;
 import com.mjc.school.service.dto.CommentsDtoResponse;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.NullValueCheckStrategy;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 
+import java.util.List;
+
+@Primary
 @Mapper(componentModel = "spring", nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS)
 public abstract class CommentMapper {
 

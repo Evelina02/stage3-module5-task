@@ -1,10 +1,10 @@
 package com.mjc.school.repository.filter.specification;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.util.CollectionUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SearchFilterSpecificationsBuilder<T> {
     private final List<SearchCriteria> criteriaList;

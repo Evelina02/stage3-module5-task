@@ -1,11 +1,10 @@
 package com.mjc.school.repository.filter.specification;
 
-import java.util.List;
-
-import org.springframework.data.jpa.domain.Specification;
-
 import com.mjc.school.repository.filter.pagination.Pagination;
 import com.mjc.school.repository.filter.sorting.Sorting;
+import org.springframework.data.jpa.domain.Specification;
+
+import java.util.List;
 
 public class EntitySearchSpecification {
 

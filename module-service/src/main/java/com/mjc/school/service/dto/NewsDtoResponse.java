@@ -1,10 +1,14 @@
 package com.mjc.school.service.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import org.springframework.hateoas.RepresentationModel;
+
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NewsDtoResponse {
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class NewsDtoResponse extends RepresentationModel<NewsDtoResponse> {
     private Long id;
     private String title;
     private String content;
@@ -30,37 +34,7 @@ public class NewsDtoResponse {
         this.commentsDto = commentsDto;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public void setCreatedDate(LocalDateTime createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    public void setLastUpdatedDate(LocalDateTime lastUpdatedDate) {
-        this.lastUpdatedDate = lastUpdatedDate;
-    }
-
-    public void setAuthorDto(AuthorDtoResponse authorDto) {
-        this.authorDto = authorDto;
-    }
-
-    public void setTagsDto(List<TagDtoResponse> tagsDto) {
-        this.tagsDto = tagsDto;
-    }
-
-    public void setCommentsDto(List<CommentsDtoForNewsResponse> commentsDto) {
-        this.commentsDto = commentsDto;
-    }
 
     public Long getId() {
         return id;
@@ -92,5 +66,36 @@ public class NewsDtoResponse {
 
     public List<CommentsDtoForNewsResponse> getCommentsDto() {
         return commentsDto;
+    }
+
+    public void setCommentsDto(List<CommentsDtoForNewsResponse> commentsDto) {
+        this.commentsDto = commentsDto;
+    }
+    public void setAuthorDto(AuthorDtoResponse authorDto) {
+        this.authorDto = authorDto;
+    }
+
+    public void setTagsDto(List<TagDtoResponse> tagsDto) {
+        this.tagsDto = tagsDto;
+    }
+
+    public void setLastUpdatedDate(LocalDateTime lastUpdatedDate) {
+        this.lastUpdatedDate = lastUpdatedDate;
+    }
+
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }

@@ -2,7 +2,7 @@ package com.mjc.school.controller;
 
 public final class RestApiConst {
 
-    public static final String API_ROOT_PATH = "/api/{apiVersion}";
+    public static final String API_ROOT_PATH = "/api/v{apiVersion}";
 
     public static final String AUTHOR_API_ROOT_PATH = API_ROOT_PATH + "/authors";
     public static final String NEWS_API_ROOT_PATH = API_ROOT_PATH + "/news";

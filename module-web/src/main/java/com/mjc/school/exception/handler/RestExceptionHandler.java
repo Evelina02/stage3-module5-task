@@ -1,10 +1,9 @@
 package com.mjc.school.exception.handler;
 
-import static com.mjc.school.service.exceptions.ServiceErrorCode.API_VERSION_NOT_SUPPORTED;
-import static com.mjc.school.service.exceptions.ServiceErrorCode.RESOURCE_NOT_FOUND;
-import static com.mjc.school.service.exceptions.ServiceErrorCode.UNEXPECTED_ERROR;
-import static com.mjc.school.service.exceptions.ServiceErrorCode.VALIDATION;
-
+import com.mjc.school.service.exceptions.NotFoundException;
+import com.mjc.school.service.exceptions.ResourceConflictServiceException;
+import com.mjc.school.service.exceptions.ServiceException;
+import com.mjc.school.service.exceptions.ValidatorException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -12,10 +11,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.mjc.school.service.exceptions.NotFoundException;
-import com.mjc.school.service.exceptions.ResourceConflictServiceException;
-import com.mjc.school.service.exceptions.ServiceException;
-import com.mjc.school.service.exceptions.ValidatorException;
+import static com.mjc.school.service.exceptions.ServiceErrorCode.*;
 
 @ControllerAdvice
 public class RestExceptionHandler extends ResponseEntityExceptionHandler {

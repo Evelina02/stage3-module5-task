@@ -1,25 +1,5 @@
 package com.mjc.school.repository.impl;
 
-import java.lang.reflect.ParameterizedType;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Order;
-import javax.persistence.criteria.Path;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-import javax.persistence.metamodel.EntityType;
-
-import org.hibernate.PersistentObjectException;
-import org.hibernate.exception.ConstraintViolationException;
-
 import com.mjc.school.repository.BaseRepository;
 import com.mjc.school.repository.exception.EntityConflictRepositoryException;
 import com.mjc.school.repository.filter.pagination.Page;
@@ -28,6 +8,20 @@ import com.mjc.school.repository.filter.sorting.Sorting;
 import com.mjc.school.repository.filter.specification.EntitySearchSpecification;
 import com.mjc.school.repository.filter.specification.SearchFilterSpecification;
 import com.mjc.school.repository.model.BaseEntity;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.Query;
+import jakarta.persistence.TypedQuery;
+import jakarta.persistence.criteria.*;
+import jakarta.persistence.metamodel.EntityType;
+import org.hibernate.PersistentObjectException;
+import org.hibernate.exception.ConstraintViolationException;
+
+
+import java.lang.reflect.ParameterizedType;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 @SuppressWarnings("unchecked")
 public abstract class AbstractDBRepository<T extends BaseEntity<K>, K> implements BaseRepository<T, K> {

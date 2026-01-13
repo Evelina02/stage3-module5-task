@@ -1,14 +1,13 @@
 package com.mjc.school.service.mapper;
 
-import java.util.List;
-
+import com.mjc.school.repository.model.Tag;
+import com.mjc.school.service.dto.TagDtoRequest;
+import com.mjc.school.service.dto.TagDtoResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.NullValueCheckStrategy;
 
-import com.mjc.school.repository.model.Tag;
-import com.mjc.school.service.dto.TagDtoRequest;
-import com.mjc.school.service.dto.TagDtoResponse;
+import java.util.List;
 
 @Mapper(componentModel = "spring",  nullValueCheckStrategy = NullValueCheckStrategy.ALWAYS )
 public interface TagMapper {

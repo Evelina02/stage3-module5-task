@@ -1,12 +1,11 @@
 package com.mjc.school.repository.impl;
 
-import java.util.List;
-
-import org.springframework.stereotype.Repository;
-
 import com.mjc.school.repository.model.Author;
 import com.mjc.school.repository.model.News;
 import com.mjc.school.repository.model.Tag;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public class NewsRepository extends AbstractDBRepository<News, Long> {

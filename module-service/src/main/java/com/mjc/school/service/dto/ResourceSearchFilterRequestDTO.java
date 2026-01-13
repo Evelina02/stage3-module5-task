@@ -1,13 +1,12 @@
 package com.mjc.school.service.dto;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.lang.Nullable;
-
 import com.mjc.school.service.validator.constraint.Min;
 import com.mjc.school.service.validator.constraint.SearchCriteria;
 import com.mjc.school.service.validator.constraint.SortAndOrder;
+import org.springframework.lang.Nullable;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class ResourceSearchFilterRequestDTO {

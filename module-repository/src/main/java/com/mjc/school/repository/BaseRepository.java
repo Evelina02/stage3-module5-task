@@ -1,10 +1,10 @@
 package com.mjc.school.repository;
 
-import java.util.Optional;
-
 import com.mjc.school.repository.filter.pagination.Page;
 import com.mjc.school.repository.filter.specification.EntitySearchSpecification;
 import com.mjc.school.repository.model.BaseEntity;
+
+import java.util.Optional;
 
 public interface BaseRepository<T extends BaseEntity<K>, K> {
 

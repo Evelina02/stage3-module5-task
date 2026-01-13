@@ -1,10 +1,10 @@
 package com.mjc.school.repository.filter.specification;
 
+import com.mjc.school.repository.exception.SearchOperationNotFoundException;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
-
-import com.mjc.school.repository.exception.SearchOperationNotFoundException;
 
 public enum SearchOperation {
     AND_PREDICATE("and"),
@@ -64,3 +64,5 @@ public enum SearchOperation {
         return PREDICATES.stream().anyMatch(searchOperation -> searchOperation.getName().equalsIgnoreCase(operation));
     }
 }
+
+

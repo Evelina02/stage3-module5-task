@@ -1,13 +1,12 @@
 package com.mjc.school.versioning;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import javax.servlet.http.HttpServletRequest;
-
+import com.mjc.school.exception.handler.ApiVersionNotSupportedException;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.servlet.mvc.condition.RequestCondition;
 
-import com.mjc.school.exception.handler.ApiVersionNotSupportedException;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ApiVersionCondition implements RequestCondition<ApiVersionCondition> {
 

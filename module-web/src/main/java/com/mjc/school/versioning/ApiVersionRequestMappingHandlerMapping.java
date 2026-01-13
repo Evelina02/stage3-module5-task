@@ -1,10 +1,10 @@
 package com.mjc.school.versioning;
 
-import java.lang.reflect.Method;
-
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.web.servlet.mvc.condition.RequestCondition;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
+
+import java.lang.reflect.Method;
 
 public class ApiVersionRequestMappingHandlerMapping extends RequestMappingHandlerMapping {
     @Override
