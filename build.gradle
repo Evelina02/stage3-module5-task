@@ -12,6 +12,9 @@ subprojects {
 
     group = 'com.mjc.school'
 
+    sourceCompatibility = 17
+    targetCompatibility = 17
+
     test {
         useJUnitPlatform()
         testLogging {
